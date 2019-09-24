@@ -190,7 +190,7 @@ While returning from a project meeting and staring out of the train's window I h
 
 \newpage
 
-\end{comment}
+
 
 
 \begin{tightcenter}
@@ -226,6 +226,57 @@ The tutorial covers following topics:
 
 \noindent
 In addition to this, I will also try to accommodate the suggestions you have made in survey.
+\end{comment}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                    NEW PAGE                                    %
+%                  First things first                            %
+%                                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{tightcenter}
+{\Huge \textbf{First things first}}
+\end{tightcenter}
+
+Download all files from here \verb|https://github.com/AtrCheema/Intro_to_LaTeX|
+
+Create Overleaf project
+
+Upload all files in your project.
+
+Remove/delete `main.tex' file which is already there.
+
+Press ``compile'' to get tutorial in PDF format. 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                    NEW PAGE                                    %
+%                    Basics about LaTeX                          %
+%                                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{tightcenter}
+{\Huge \textbf{Basics about \LaTeX{}}}
+\end{tightcenter}
+
+\begin{itemize}
+    \item \LaTeX{} is document preparation system which is driven by TeX.
+\item TeX is a formatting system for text which is the core of \LaTeX{}.
+\item Different systems use TeX such as LuaTeX, PDFTeX, XeTeX, \LaTeX{} etc.
+\item To use LaTex, you need to install two things, the engine and the editor.
+\item The engine is the core which will process the input as per rules of TeX. On Windows \item one of famous is MikTex.
+\item The editor is our way to interact with MikTeX or TeX. Texmaker is one of many editors.
+\item In short install MikTex and TexMaker both on your (windows) system in order to use them
+\item \LaTeX{} is not like MS Office where you “What You See Is What You Get” but in \LaTeX{}, “separating presentation from content”.
+
+\end{itemize}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                    NEW PAGE                                    %
@@ -1387,6 +1438,102 @@ Don't forget to put \verb|\usepackage[square]{natbib}| in preamble.
 
 \bibliographystyle{cell}
 \bibliography{bib_file}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                    NEW PAGE                                    %
+%            Create your own environment                         %
+%                                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{tightcenter}
+{\Huge \textbf{Create your own environment}}
+\end{tightcenter}
+
+
+\begin{lstlisting}
+\documentclass[10pt]{article}
+\usepackage[linewidth=2pt]{mdframed}
+\newenvironment{tightcenter}{%
+  \setlength\topsep{0pt}
+  \setlength\parskip{0pt}
+  \begin{mdframed}
+  \begin{center}
+}{%
+  \end{center}
+  \vspace{20pt}  % leave some space below text
+  \end{mdframed}
+}
+\begin{document}
+\begin{tightcenter}
+This is inside `tightcenter' environment.
+\end{tightcenter}
+\end{document}
+\end{lstlisting}
+
+\begin{mdframed}
+\begin{tightcenter}
+This is inside `tightcenter' environment. 
+\end{tightcenter}
+\end{mdframed}
+
+Instead of writing four commands we combine 4 commands into one and call the new command \textit{tightcenter} and this new command executes all 4 commands.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                    NEW PAGE                                    %
+%            Create your own environment                         %
+%                                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{tightcenter}
+{\Huge \textbf{Create your own environment}}
+\end{tightcenter}
+
+
+\begin{lstlisting}
+\documentclass[10pt]{article}
+\usepackage[linewidth=2pt]{mdframed}
+\newenvironment{tightcenter}{%
+  \setlength\topsep{0pt}
+  \setlength\parskip{0pt}
+  \begin{mdframed}
+  \begin{center}
+}{%
+  \end{center}
+  \end{mdframed}
+  \vspace{20pt}  % leave some space below text
+}
+\begin{document}
+\begin{tightcenter}
+Can you identify the change between this and previous environment?.
+\end{tightcenter}
+\end{document}
+\end{lstlisting}
+
+\newenvironment{Ntightcenter}{%
+  \setlength\topsep{0pt}
+  \setlength\parskip{0pt}
+  \begin{mdframed}
+  \begin{center}
+}{%
+  \end{center}
+  \end{mdframed}
+  \vspace{20pt}  % leave some space below text
+}
+
+
+\begin{Ntightcenter}
+Can you identify the change between this and previous environment?.
+\end{Ntightcenter}
+
+
+
+
+
+
 
 \end{document}
 %This document is part of the trackchanges sourceforge project and is published under GNU Public License version 2 or above
