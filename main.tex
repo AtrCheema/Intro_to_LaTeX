@@ -301,6 +301,34 @@ This is my first Latex document.
 This is my first Latex document.
 \end{mdframed}
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                    NEW PAGE                                    %
+%                  Compiling Latex Code                          %
+%                                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{tightcenter}
+{\Huge \textbf{Compiling Latex Code}}
+\end{tightcenter}
+
+Create a file named \verb|C:\Users\User_NAME\Desktop\test.tex|
+
+Open the file and write following lines in the file
+\begin{lstlisting}
+\documentclass{article}
+\begin{document}
+This is my first Latex document compiled. 
+\end{document}
+\end{lstlisting}
+
+Open command prompt or `cmd' in windows and type ``pdflatex \verb|C:\Users\User_NAME\Desktop\test.tex|'' command 
+
+You will get output file named `test.pdf'.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                    NEW PAGE                                    %
 %                    Writing Korean                              %
@@ -1530,6 +1558,67 @@ Can you identify the change between this and previous environment?.
 \end{Ntightcenter}
 
 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                    NEW PAGE                                    %
+%                       Track changes                            %
+%                                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{tightcenter}
+{\Huge \textbf{Track changes}}
+\end{tightcenter}
+
+\begin{abstract} \noindent The intention of this text is to demonstrate the use of \texttt{trackchanges.sty}. The package defines five editing commands:
+\begin{itemize}
+  \item \begin{verbatim}\note[initials]{note text}\end{verbatim}
+  \item \begin{verbatim}\annote[initials]{note text}\end{verbatim}
+  \item \begin{verbatim}\add[initials]{additional text}\end{verbatim}
+  \item \begin{verbatim}\remove[initials]{removed text}\end{verbatim}
+  \item \begin{verbatim}\change[initials]{original text}{new text}\end{verbatim}
+\end{itemize}
+\end{abstract}
+\section*{Introduction} 
+The purpose of this document is to show how to do some \add[FS]{complex} changes in document in collaborative writing as done in \change[PS]{Microsoft Office}{OpenOffice.org}. Overleaf now provides more robust way of tracking changes in latex source code\note[FS]{Should I describe the methodology of overleaf}. But it is only possible when you have internet \remove[PS]{connection}.
+You can use any source control package like \emph{git} to achieve same thing \annote[PS]{though}{what about PDF? The changes can be seen in PDF as well? ...}.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                    NEW PAGE                                    %
+%                   Track changes                                %
+%                                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{tightcenter}
+{\Huge \textbf{Track changes}}
+\end{tightcenter}
+
+
+\begin{lstlisting}
+\documentclass[a4paper,10pt]{article}
+\usepackage{url}
+\usepackage{trackchanges}
+\renewcommand{\initialsOne}{FS}
+\renewcommand{\initialsTwo}{PS}
+\begin{document}
+\begin{abstract} \noindent The intention of this text is to demonstrate the use of \texttt{trackchanges.sty}. The package defines five editing commands:
+\begin{itemize}
+  \item \begin{verbatim}\note[initials]{note text}\end{verbatim}
+  \item \begin{verbatim}\annote[initials]{note text}\end{verbatim}
+  \item \begin{verbatim}\add[initials]{additional text}\end{verbatim}
+  \item \begin{verbatim}\remove[initials]{removed text}\end{verbatim}
+  \item \begin{verbatim}\change[initials]{original text}{new text}\end{verbatim}
+\end{itemize}
+\end{abstract}
+\section*{Introduction} 
+The purpose of this document is to show how to do some \add[FS]{complex} changes in document in collaborative writing as done in \change[PS]{Microsoft Office}{OpenOffice.org}. Overleaf now provides more robust way of tracking changes in latex source code\note[FS]{Should I describe the methodology of overleaf}. But it is only possible when you have internet \remove[PS]{connection}.
+You can use any source control package like \emph{git} to achieve same thing \annote[PS]{though}{what about PDF? The changes can be seen in PDF as well? ...}.
+\end{document}
+\end{lstlisting}
 
 
 
