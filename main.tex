@@ -796,7 +796,7 @@ U_ce^{\int Dw^2dt}dt &=-\sqrt[]{\frac{2}{\pi}}D\int_0^t\frac{1}{a}g(\tau)-h(x,\t
 U_c &=-\sqrt[]{\frac{2}{\pi}}D\int_0^t\frac{1}{a}g(\tau)-h(x,\tau)e^{\int Dw^2d\tau}-e^{\int Dw^2dt} dt\\
     \end{split}
 \end{align}
-The equations are aligned along \verb|&| by using \textit{split} environment. You have to put \verb|\\| when using multiple equations inside an environment or to put some part of an equation on second line.
+The equations are aligned along \verb|&| by using \textit{split} environment. You have to put \verb|\\| when using multiple equations inside an environment or to put some part of an equation on second line. The \textit{split} environment is for breaking an equation into small pieces and making sure that those small peaces are aligned properly.
 \end{document}
 \end{lstlisting}
 
@@ -1007,6 +1007,7 @@ You can also wrap the figure around text by using \verb|\usepackage{wrapfig}| an
 \noindent
 The first argument `r' puts it on right side and second argument defines container for the figure. 
 This is some text without any meaning.This is some text without any meaning.This is some text without any meaning. This is some text without any meaning.This is some text without any meaning.This is some text without any meaning.This is some text without any meaning. \lipsum[1]
+\end{document}
 \end{lstlisting}
 
 
@@ -1081,7 +1082,7 @@ You can put two separate images side.  The argument \verb|!| means overriding in
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                    NEW PAGE                                    %
-%                     Images 4r                                   %
+%                    Images 4r                                   %
 %                                                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -1259,7 +1260,7 @@ You can fix the cell widths. One `pt' is equal to \(\sim\)0.35mm. The text align
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                    NEW PAGE                                    %
-%                     Tables 2c                                   %
+%                    Tables 2c                                   %
 %                                                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -1306,7 +1307,7 @@ You can fix the cell widths. One `pt' is equal to \(\sim\)0.35mm. The text align
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                    NEW PAGE                                    %
-%                     Tables 3c                                   %
+%                    Tables 3c                                   %
 %                                                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -1358,7 +1359,7 @@ The Source Of Rights & Taqi Misbah Yazdi &  & \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                    NEW PAGE                                    %
-%                     Tables 3r                                   %
+%                    Tables 3r                                   %
 %                                                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -1544,13 +1545,13 @@ Don't forget to put \verb|\usepackage[square]{natbib}| in preamble.
 \begin{document}
 In order to cite a work, put its reference in a file `bib\_file.bib'. The reference format for a book is as below. 
 \begin{lstlisting}
-@book{Gerya2010,
-author    = "Gerya T V.",
-title     = "Introduction to Numerical Geodynamic Modeling",
-publisher = "Cambridge University Press",
-year      = "2010",
+@book{Gerya:2010,
+  title={Introduction to numerical geodynamic modelling},
+  author={Gerya, Taras},
+  year={2019},
+  publisher={Cambridge University Press}
 }
-end{lstlisting}
+end{lstlisting}   %TODO put backward slash at the start of this line please
 For multiplage table use the environment \texttt{longtable} provided by package \texttt{longtable}
 One can download the whole reference for a work from internet. Put all of your references in the file with extension `.bib'. Then in the `.tex' file you can cite the work of \cite{Gerya:2010}. In order to place references in your document, use following two commands
 \bibliographystyle{cell}
