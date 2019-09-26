@@ -1355,6 +1355,48 @@ The Source Of Rights & Taqi Misbah Yazdi &  & \\
 
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                    NEW PAGE                                    %
+%                     Tables 3r                                   %
+%                                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{tightcenter}
+{\Huge \textbf{Tables}}
+\end{tightcenter}
+
+
+\begin{lstlisting}
+\documentclass{article}
+\usepackage{longtable}  
+\usepackage[dvipsnames, table]{xcolor}  % to use colors
+\usepackage{geometry}
+\geometry{
+paperwidth = 200mm, paperheight = 150mm, left=15mm, right=10mm,
+ top=10mm, bottom=10mm}
+\begin{document}
+\setlength{\arrayrulewidth}{1mm}  % lines in columns
+\renewcommand{\arraystretch}{1.5} % height of each row
+For multiplage table use the environment \texttt{longtable} provided by package \texttt{longtable}
+\vspace{5cm} \begin{center} \label{tab:mylongtable}
+ \begin{longtable}[ht]{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}  \hline
+ Book Name & Writer & Year Published & comments \\   \hline
+Our Economy & Baqir al sadr  & 1960 &  about economy \\ \hline
+Our Philosophy & Baqir al sadr  & 1959 &  about philosophy \\ \hline 
+The Source Of Rights & Taqi Misbah Yazdi &  & \\ \hline
+\rowcolor{lightgray}Causality and Freedom & Mohsen Araki & here & \\ \hline
+Eternity of Man & & \  & \\ \hline
+Perfect Man &   Murtadha Mutahhari & 1975  & \\ \hline
+ Book Name & Writer & Year Published & comments \\  \hline
+Our Economy & Baqir al sadr  & 1960 &  about economy \\ \hline
+Our Philosophy & Baqir al sadr  & 1959 &  \cellcolor{blue} about philosophy \\ \hline 
+The Source Of Rights & Taqi Misbah Yazdi &  & \\ \hline
+\end{longtable} \end{center} \end{document}
+\end{lstlisting}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                    NEW PAGE                                    %
 %            Hypertext and hyper-reference                       %
@@ -1472,10 +1514,54 @@ Don't forget to put \verb|\usepackage[square]{natbib}| in preamble.
 
 
 
-
-
 \bibliographystyle{cell}
 \bibliography{bib_file}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                    NEW PAGE                                    %
+%                  Bibliography  c                               %
+%                                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{tightcenter}
+{\Huge \textbf{Bibliography}}
+\end{tightcenter}
+
+
+\begin{lstlisting}
+\documentclass{article}
+\usepackage[square]{natbib}
+\usepackage[dvipsnames, table]{xcolor}  % to use colors
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{MyOwnColor}{RGB}{219, 48, 122}
+\usepackage{listings} % for source code display
+\lstset {language=[LaTeX]TeX,    breaklines=true,    basicstyle=\tt\scriptsize,    keywordstyle=\color{blue}, stringstyle=\color{mauve},     commentstyle=\color{codepurple},    backgroundcolor=\color{backcolour}, identifierstyle=\color{magenta},}
+\begin{document}
+In order to cite a work, put its reference in a file `bib\_file.bib'. The reference format for a book is as below. 
+\begin{lstlisting}
+@book{Gerya2010,
+author    = "Gerya T V.",
+title     = "Introduction to Numerical Geodynamic Modeling",
+publisher = "Cambridge University Press",
+year      = "2010",
+}
+end{lstlisting}
+For multiplage table use the environment \texttt{longtable} provided by package \texttt{longtable}
+One can download the whole reference for a work from internet. Put all of your references in the file with extension `.bib'. Then in the `.tex' file you can cite the work of \cite{Gerya:2010}. In order to place references in your document, use following two commands
+\bibliographystyle{cell}
+\bibliography{bib_file} Don't forget to put \verb|\usepackage[square]{natbib}| in preamble.
+\end{document}
+\end{lstlisting}
+
+
+
+
+
 
 
 
